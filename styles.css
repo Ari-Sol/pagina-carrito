@@ -1,0 +1,231 @@
+/*Aplicamos estilos base a todos los elementos de la página para a
+segurarnos de que el diseño sea consistente en todos los navegadores.*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: black;
+}
+
+/*cuerpo*/
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: #f8ccdd;
+    padding-top: 80px;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/*titulo de la página*/
+h1{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin: 30px 0px;
+    color: rgb(228, 110, 146);
+}
+
+/*titulo pagina con el link*/
+.titulo-link {
+  text-decoration: none;
+  color: rgb(228, 110, 146); /* mismo color del título */
+}
+
+/*tamaño de las imagenes de los productos*/
+img {
+    width: 320px;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 20px 20px 0px 0px;
+}
+
+/*imagenes de los botones del encabezado*/
+.boton-imagen {
+    background: none;      
+    border: none;          
+    padding: 0;            
+    margin: 0;             
+    cursor: pointer;       
+    outline: none;  
+}
+
+/*tamaño de las imagenes de los botones del encabezado*/
+.boton-imagen img {
+    width: 70px;          
+    height: 70px;
+    display: block;       
+} 
+
+/*encabezado*/
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:15%;
+    height: 70px;
+    top: 0;
+    position: fixed;
+    width: 100%;
+}
+
+/*fondo cuando hace scroll(encabezdo)*/
+.scroll{
+    background-color: #f7bad2;
+    box-shadow: .1rem .2rem .3rem #ddb59b;
+}
+
+/*letra cuando hace scroll(encabezdo)*/
+.scroll h1{
+    color: #f3e2ee;
+}
+
+/** Estilos para el ícono del carrito **/
+.carrito {
+    filter: invert(100%); 
+    width: 45px;          
+    height: auto;      
+}
+
+/** Contenedor principal de los productos **/
+.contenedor {
+    display: flex;          
+    justify-content: center; 
+    flex-wrap: wrap;        
+    gap: 50px;               
+    margin-bottom: 20px;   
+}
+
+/** Tarjeta individual de cada producto **/
+.contenedor > div {
+    box-shadow: 0px 0px 5px 0px rgba(255, 188, 219, 0.75); 
+    background-color: #fff8de; 
+    border-radius: 20px;     
+}
+
+/** Efecto al pasar el mouse sobre una tarjeta **/
+.contenedor > div:hover {
+    background-color: #fdd996; 
+}
+
+/** Contenedor de la información del producto (nombre, precio, botón) **/
+.informacion {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    gap: 15px;             
+}
+
+/** Nombre del producto **/
+.informacion > p:first-child {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    font-weight: 300; 
+}
+
+/** Precio del producto **/
+.informacion .precio {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/** Parte decimal del precio (después del punto) **/
+.informacion .precio span {
+    font-size: 17px;
+    font-weight: 300;
+}
+
+/** Botón para agregar el producto **/
+.informacion button {
+    background-color: #eec1f7; 
+    width: 100px;
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+    font-size: 17px;
+    font-weight: 300;
+    cursor: pointer;          
+}
+
+/** Efecto al pasar el mouse sobre el botón **/
+.informacion button:hover {
+    background-color: #d882c5; 
+}
+
+/** Contenedor del botón del menú desplegable **/
+.contenedor-menu {
+  position: relative;
+  display: inline-block;
+}
+
+/** Menú desplegable oculto por defecto **/
+.menu-desplegable {
+  display: none;
+  position: absolute;
+  top: 100%; /* Aparece justo debajo del botón */
+  left: 73%; /* Centrado respecto al botón */
+  transform: translateX(-50%); /* Ajuste fino para centrarlo */
+  background-color: rgba(255, 172, 220, 0.842);
+  border: 1px solid #f393ddc9;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  padding: 10px;
+  min-width: 150px;
+}
+
+/** Enlaces dentro del menú desplegable **/
+.menu-desplegable a {
+    display: block;
+    padding: 5px 10px;
+    color: #333;
+    text-decoration: none;
+}
+
+/** Efecto al pasar el mouse sobre los enlaces del menú **/
+.menu-desplegable a:hover {
+    background-color: #ffe6f7f3; 
+}
+
+/** Pie de página que ocupa todo el ancho al final de la página **/
+footer {
+    background-color: #f7bad2;
+    text-align: center;
+    padding: 40px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    margin-top: auto; /* clave para que se "pegue" abajo */
+}
+
+/** Enlaces dentro del pie de página **/
+footer a {
+    margin: 0px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/** Efecto al pasar el mouse sobre los enlaces del pie de página **/
+footer a:hover {
+    color: #ffd5ec; 
+}
+
+/* Espacio para el contenido principal en carrito.html */
+main {
+    flex: 1;
+}
+
+/* Para asegurar separación visual si hay pocos productos */
+#carrito-contenido {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#carrito-main {
+    margin-top: 10px;
+    padding-bottom: 50px;
+}

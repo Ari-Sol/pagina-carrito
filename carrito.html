@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="styles.css" rel="stylesheet" type="text/css">
+  <title>Beauty Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header id="header">
+    <h1><a href="index.html" class="titulo-link">Beauty Store</a></h1>
+
+    <a href="carrito.html" class="boton-imagen">
+      <img src="pag/carrito.png" alt="carrito">
+    </a>
+
+    <div class="contenedor-menu">
+      <button id="btn-menu" class="boton-imagen">
+        <img src="pag/menu.png" alt="menu">
+      </button>
+    </div>
+
+    <div id="menu-desplegable" class="menu-desplegable">
+      <a href="rubyrose.html">Ruby Rose</a>
+      <a href="AniK.html">Ani K</a>
+    </div>
+  </header>
+
+  <h1 style="text-align:center;">Carrito de compras</h1>
+
+  <main id="carrito-main" style="margin-top: 120px; padding-bottom: 80px;">
+    <div id="carrito-contenido" class="contenedor"></div>
+    <div id="total" style="text-align:center; font-size: 20px; margin: 20px 0;"></div>
+    <div style="text-align:center;">
+      <button id="vaciar-carrito" style="background-color:#eec1f7; border:none; padding:10px 20px; border-radius:10px; cursor:pointer;">
+        Vaciar Carrito
+      </button>
+    </div>
+  </main>
+
+  <footer>
+    <p>Síguenos en redes sociales:</p>
+    <a href="https://www.instagram.com" target="_blank">Instagram</a>
+    <a href="https://www.facebook.com" target="_blank">Facebook</a>
+    <a href="https://www.tiktok.com" target="_blank">TikTok</a>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
