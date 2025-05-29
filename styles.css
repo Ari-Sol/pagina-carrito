@@ -165,30 +165,38 @@ header{
 
 /** Menú desplegable oculto por defecto **/
 .menu-desplegable {
-  display: none;
-  position: absolute;
-  top: 100%; /* Aparece justo debajo del botón */
-  left: 73%; /* Centrado respecto al botón */
-  transform: translateX(-50%); /* Ajuste fino para centrarlo */
-  background-color: rgba(255, 172, 220, 0.842);
-  border: 1px solid #f393ddc9;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  background-color: rgb(252, 201, 220);
+  border-left: 2px solid #ffc5e7f1;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.15);
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
   z-index: 1000;
-  padding: 10px;
-  min-width: 150px;
+  padding-top: 80px; /* para no tapar el header */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-left: 20px;
 }
 
-/** Enlaces dentro del menú desplegable **/
+
+.menu-desplegable.mostrar {
+  transform: translateX(0);
+}
+
 .menu-desplegable a {
-    display: block;
-    padding: 5px 10px;
-    color: #333;
-    text-decoration: none;
+  font-size: 18px;
+  padding: 10px 0;
+  color: #333;
+  text-decoration: none;
 }
 
-/** Efecto al pasar el mouse sobre los enlaces del menú **/
 .menu-desplegable a:hover {
-    background-color: #ffe6f7f3; 
+  background-color: #ffe6f7f3;
 }
 
 /** Pie de página que ocupa todo el ancho al final de la página **/
