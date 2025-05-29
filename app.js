@@ -18,14 +18,12 @@ const menu = document.getElementById('menu-desplegable');
 
 if (btnMenu && menu) {
     btnMenu.addEventListener('click', () => {
-        // Alterna entre mostrar y ocultar el menú
-        menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+        menu.classList.toggle('mostrar');
     });
 
-    // Cierra el menú si haces clic fuera de él
     window.addEventListener('click', function (e) {
         if (!btnMenu.contains(e.target) && !menu.contains(e.target)) {
-            menu.style.display = 'none';
+            menu.classList.remove('mostrar');
         }
     });
 }
